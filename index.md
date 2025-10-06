@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# About Me
+## About Me
 
 Hi! I’m a Computer Science student at Florida International University.  
 I’m passionate about computer graphics—especially OpenGL—and I enjoy building tools for real-time rendering, shaders, and small game engines. I like clean, readable code and simple UI that helps you focus on making things.
@@ -15,7 +15,7 @@ I’m passionate about computer graphics—especially OpenGL—and I enjoy build
 
 ---
 
-# My Projects
+## My Projects
 
 ![Branching](./assets/images/2DEngine.jpg)
 
