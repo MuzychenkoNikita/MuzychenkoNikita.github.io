@@ -279,7 +279,7 @@ h1, h2, h3 { font-family: var(--font-heading); letter-spacing: -0.03em; }
 /* =========================================
    8. PROJECT DETAIL & MARKDOWN CONTENT
    ========================================= */
-.project-detail { 
+.project-detail, .post-detail { 
     margin-top: 120px; /* Gives space for the nav on project pages */ 
 }
 
