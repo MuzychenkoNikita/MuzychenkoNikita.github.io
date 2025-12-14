@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">NM.</div>
+        <ul class="nav-links">
+            <li><a href="/">About</a></li>
+            <li><a href="/projects">Gallery</a></li>
+            <li><a href="/blog">Articles</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        {{ content }}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nikita Muzychenko</p>
+    </footer>
+</body>
+</html>

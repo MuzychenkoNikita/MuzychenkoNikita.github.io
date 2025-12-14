@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<article class="project-detail">
+    <header class="project-header">
+        <h1>{{ page.title }}</h1>
+        <div class="tech-stack">
+            {% for tech in page.tech %}
+            <span class="tag">{{ tech }}</span>
+            {% endfor %}
+        </div>
+        <div class="project-links">
+            {% if page.github %}
+            <a href="{{ page.github }}" class="btn"><i class="fab fa-github"></i> Source Code</a>
+            {% endif %}
+        </div>
+    </header>
+
+    {% if page.image %}
+    <img src="{{ page.image }}" alt="{{ page.title }}" class="hero-image">
+    {% endif %}
+
+    <div class="content-body">
+        {{ content }}
+    </div>
+</article>

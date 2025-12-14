@@ -1,0 +1,11 @@
+title: Nikita Muzychenko
+description: Graphics Engineer
+theme: null
+
+# This enables the custom "_projects" folder
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+markdown: kramdown
