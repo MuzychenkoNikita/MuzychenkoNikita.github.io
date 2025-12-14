@@ -1,40 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikita Muzychenko | Graphics Engineer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+---
+layout: default
+title: Home
+---
 
-    <nav>
-        <div class="logo">NM.</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Gallery</a></li>
-            <li><a href="#articles">Articles</a></li>
-            <li><a href="#contact" class="btn">Contact</a></li>
-        </ul>
-    </nav>
-
-    <header class="hero">
-        <canvas id="hero-canvas"></canvas>
-        <div class="hero-content">
-            <h1 class="glitch-text">Nikita Muzychenko</h1>
-            <h2>Graphics Engineer</h2>
-            <p>Specializing in Rendering, Shaders, and Real-time Engines.</p>
+<section class="hero-section">
+    <div class="hero-content">
+        <h1 class="glitch-text">Nikita Muzychenko</h1>
+        <h2>Graphics Engineer</h2>
+        <p>Specializing in Rendering Architecture, Shader Development, and Real-time Engines.</p>
+        
+        <div class="hero-actions">
+            <a href="/projects" class="btn btn-primary">View Project Gallery</a>
+            <a href="/blog" class="btn btn-outline">Read Articles</a>
         </div>
-    </header>
+    </div>
+</section>
 
-    <section id="about" class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-grid">
-            <div class="about-text">
-                <p>Hello! I am a Graphics Engineer passionate about the intersection of mathematics and art. I build performant rendering systems and write efficient shaders.</p>
-                <br>
-                <h3>Tech Stack</h3>
+<hr class="divider">
+
+<section class="about-section">
+    <h2>About Me</h2>
+    <div class="about-grid">
+        <div class="about-text">
+            <p>
+                Hello! I am a Graphics Engineer passionate about the intersection of mathematics and art. 
+                I focus on building performant rendering systems and writing efficient shaders for real-time applications.
+            </p>
+            <p>
+                Currently open to work in game development, simulation, or engine architecture roles.
+            </p>
+
+            <div class="tech-stack-container">
+                <h3>Technical Arsenal</h3>
                 <div class="tags">
                     <span>C++</span>
                     <span>Vulkan</span>
@@ -43,88 +40,24 @@
                     <span>HLSL/GLSL</span>
                     <span>Unreal Engine 5</span>
                     <span>Python</span>
-                </div>
-            </div>
-            <div class="about-stats">
-                <div class="stat-card">
-                    <h3>4+</h3>
-                    <p>Years Exp</p>
-                </div>
-                <div class="stat-card">
-                    <h3>20+</h3>
-                    <p>Projects</p>
+                    <span>Rust</span>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section id="projects" class="container">
-        <h2 class="section-title">Project Gallery</h2>
-        <div class="gallery-grid">
-            <div class="project-card">
-                <img src="https://placehold.co/600x400/222/eee?text=Vulkan+Renderer" alt="Vulkan Renderer">
-                <div class="overlay">
-                    <h3>Vulkan PBR Renderer</h3>
-                    <p>A custom engine supporting physically based rendering and multi-threading.</p>
-                    <a href="#" class="link-btn"><i class="fab fa-github"></i> View Code</a>
-                </div>
+        <div class="about-stats">
+            <div class="stat-item">
+                <span class="stat-number">4+</span>
+                <span class="stat-label">Years Experience</span>
             </div>
-            <div class="project-card">
-                <img src="https://placehold.co/600x400/222/eee?text=Ray+Marching" alt="Ray Marching Demo">
-                <div class="overlay">
-                    <h3>Volumetric Ray Marching</h3>
-                    <p>Real-time cloud rendering implementation using GLSL.</p>
-                    <a href="#" class="link-btn"><i class="fab fa-github"></i> View Code</a>
-                </div>
+            <div class="stat-item">
+                <span class="stat-number">{{ site.projects.size }}</span>
+                <span class="stat-label">Projects Shipped</span>
             </div>
-            <div class="project-card">
-                <img src="https://placehold.co/600x400/222/eee?text=Fluid+Sim" alt="Fluid Sim">
-                <div class="overlay">
-                    <h3>GPU Fluid Simulation</h3>
-                    <p>Lagrangian fluid simulation computed entirely on the GPU.</p>
-                    <a href="#" class="link-btn"><i class="fab fa-github"></i> View Code</a>
-                </div>
+            <div class="stat-item">
+                <span class="stat-number">{{ site.posts.size }}</span>
+                <span class="stat-label">Articles Written</span>
             </div>
         </div>
-    </section>
-
-    <section id="articles" class="container">
-        <h2 class="section-title">Technical Articles</h2>
-        <div class="article-list">
-            <article class="article-item">
-                <div class="date">Oct 12, 2023</div>
-                <div class="article-info">
-                    <h3><a href="#">Optimizing Compute Shaders for Mobile GPUs</a></h3>
-                    <p>A deep dive into memory alignment and tile-based rendering quirks.</p>
-                </div>
-            </article>
-            <article class="article-item">
-                <div class="date">Aug 05, 2023</div>
-                <div class="article-info">
-                    <h3><a href="#">Understanding Coordinate Spaces in 3D</a></h3>
-                    <p>From Object Space to Screen Space: A mathematical breakdown.</p>
-                </div>
-            </article>
-            <article class="article-item">
-                <div class="date">Jan 20, 2023</div>
-                <div class="article-info">
-                    <h3><a href="#">My Journey learning Rust for Graphics</a></h3>
-                    <p>Why WGPU might be the future of cross-platform rendering.</p>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <div class="social-links">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="mailto:email@example.com"><i class="fas fa-envelope"></i></a>
-        </div>
-        <p>&copy; 2024 Nikita Muzychenko. Built for the web.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+    </div>
+</section>
