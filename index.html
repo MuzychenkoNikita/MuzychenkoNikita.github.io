@@ -11,11 +11,10 @@ title: Home
         <p>Creating performant visual systems at the intersection of mathematics and hardware.</p>
         
         <div class="tech-badges">
-            <span class="badge">C++</span>
+            <span class="badge">C/C++</span>
             <span class="badge">Vulkan</span>
-            <span class="badge">DirectX 12</span>
+            <span class="badge">OpenGL</span>
             <span class="badge">HLSL/GLSL</span>
-            <span class="badge">Rust/WGPU</span>
         </div>
     </div>
 </header>
@@ -25,7 +24,7 @@ title: Home
 <section>
     <h2 class="section-title">Selected Work</h2>
     <div class="bento-grid">
-        {% for project in site.projects limit:4 %}
+        {% for project in site.projects limit:2 %}
         <a href="{{ project.url }}" class="card">
             <div class="card-img-container">
                 {% if project.image %}
