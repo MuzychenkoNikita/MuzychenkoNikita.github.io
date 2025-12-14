@@ -3,61 +3,49 @@ layout: default
 title: Home
 ---
 
-<section class="hero-section">
-    <div class="hero-content">
-        <h1 class="glitch-text">Nikita Muzychenko</h1>
-        <h2>Graphics Engineer</h2>
-        <p>Specializing in Rendering Architecture, Shader Development, and Real-time Engines.</p>
-        
-        <div class="hero-actions">
-            <a href="/projects" class="btn btn-primary">View Project Gallery</a>
-            <a href="/blog" class="btn btn-outline">Read Articles</a>
-        </div>
+<header class="hero">
+    <h1>Graphics Engineer<br> & Renderer Architect</h1>
+    <p>Creating performant visual systems at the intersection of mathematics and hardware.</p>
+    
+    <div class="tech-badges">
+        <span class="badge">C++</span>
+        <span class="badge">Vulkan</span>
+        <span class="badge">DirectX 12</span>
+        <span class="badge">HLSL/GLSL</span>
+        <span class="badge">Rust/WGPU</span>
+    </div>
+</header>
+
+<section>
+    <h2 class="section-title">Selected Work</h2>
+    <div class="bento-grid">
+        {% for project in site.projects limit:4 %}
+        <a href="{{ project.url }}" class="card">
+            <div class="card-img-container">
+                {% if project.image %}
+                    <img src="{{ project.image }}" alt="{{ project.title }}">
+                {% else %}
+                    <div style="width:100%; height:100%; background: linear-gradient(45deg, #111, #222);"></div>
+                {% endif %}
+            </div>
+            <div class="card-content">
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.description | truncatewords: 15 }}</p>
+                <span class="card-link">View Project <i class="fas fa-arrow-right"></i></span>
+            </div>
+        </a>
+        {% endfor %}
     </div>
 </section>
 
-<hr class="divider">
-
-<section class="about-section">
-    <h2>About Me</h2>
-    <div class="about-grid">
-        <div class="about-text">
-            <p>
-                Hello! I am a Graphics Engineer passionate about the intersection of mathematics and art. 
-                I focus on building performant rendering systems and writing efficient shaders for real-time applications.
-            </p>
-            <p>
-                Currently open to work in game development, simulation, or engine architecture roles.
-            </p>
-
-            <div class="tech-stack-container">
-                <h3>Technical Arsenal</h3>
-                <div class="tags">
-                    <span>C++</span>
-                    <span>Vulkan</span>
-                    <span>DirectX 12</span>
-                    <span>OpenGL</span>
-                    <span>HLSL/GLSL</span>
-                    <span>Unreal Engine 5</span>
-                    <span>Python</span>
-                    <span>Rust</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="about-stats">
-            <div class="stat-item">
-                <span class="stat-number">4+</span>
-                <span class="stat-label">Years Experience</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">{{ site.projects.size }}</span>
-                <span class="stat-label">Projects Shipped</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">{{ site.posts.size }}</span>
-                <span class="stat-label">Articles Written</span>
-            </div>
-        </div>
+<section style="margin-top: 4rem;">
+    <h2 class="section-title">Latest Articles</h2>
+    <div class="article-list">
+        {% for post in site.posts limit:3 %}
+        <a href="{{ post.url }}" class="article-item">
+            <h3>{{ post.title }}</h3>
+            <span class="article-date">{{ post.date | date: "%Y / %m / %d" }}</span>
+        </a>
+        {% endfor %}
     </div>
 </section>
