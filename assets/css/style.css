@@ -100,7 +100,7 @@ h1, h2, h3 { font-family: var(--font-heading); letter-spacing: -0.03em; }
 /* =========================================
    5. HERO SECTION (WITH SHADER SUPPORT)
    ========================================= */
-   .hero { 
+.hero { 
     position: relative; 
     height: 80vh; 
     min-height: 500px;
@@ -109,30 +109,28 @@ h1, h2, h3 { font-family: var(--font-heading); letter-spacing: -0.03em; }
     overflow: hidden;
     padding: 0;
     margin-bottom: 4rem;
-    
-    /* --- NEW: Force Full Width --- */
+
+    /* The Breakout Magic */
     width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    position: relative;
     left: 50%;
     right: 50%;
-    transform: translateX(-50%);
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
-/* Ensure text sits on top of the WebGL canvas */
+/* REALIGN TEXT (Put the text back in the center box) */
 .hero-content {
     position: relative;
     z-index: 2;
-    
-    /* --- NEW: Re-align text to the center grid --- */
     width: 100%;
-    max-width: 1000px; /* Matches your <main> max-width */
-    margin: 0 auto;
-    padding-left: 2rem; /* Matches your <main> padding */
+    max-width: 1000px; /* This matches your main site width */
+    margin: 0 auto;    /* Centers the text block */
+    padding-left: 2rem;
     padding-right: 2rem;
 }
 
-/* The Shader Canvas */
+/* Ensure Canvas fills the new full-width hero */
 #hero-canvas {
     position: absolute;
     top: 0; 
@@ -141,7 +139,6 @@ h1, h2, h3 { font-family: var(--font-heading); letter-spacing: -0.03em; }
     height: 100%;
     z-index: 1; 
     opacity: 0.6;
-    object-fit: cover; /* Ensures no stretching weirdness */
 }
 
 /* Hero Typography */
