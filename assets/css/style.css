@@ -51,20 +51,47 @@ ul { list-style: none; }
 /* =========================================
    3. NAVIGATION (FLOATING GLASS)
    ========================================= */
-.glass-nav {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 600px;
-    background: rgba(16, 16, 16, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--card-border);
-    border-radius: 100px;
-    padding: 0.8rem 2rem;
+/* --- New Top Navigation --- */
+.top-nav {
+    position: absolute; /* Sits on top of the hero/background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 0;
     z-index: 1000;
+    background: transparent; /* No bar background */
+    border: none;
+}
+
+/* Ensure the nav content matches your site width */
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand { 
+    font-family: var(--font-heading); 
+    font-weight: 700; 
+    font-size: 1.5rem; /* Slightly larger logo */
+    letter-spacing: -0.5px; 
+}
+
+.nav-links { display: flex; gap: 2.5rem; }
+
+.nav-item { 
+    font-size: 1rem; 
+    color: var(--text-secondary); 
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.nav-item:hover { 
+    color: var(--text-primary); 
+    text-shadow: 0 0 10px rgba(255,255,255,0.3); /* Subtle glow on hover */
 }
 
 .nav-content { display: flex; justify-content: space-between; align-items: center; }
@@ -78,8 +105,8 @@ ul { list-style: none; }
    4. LAYOUT & TYPOGRAPHY UTILITIES
    ========================================= */
 main {
-    max-width: 1200px; /* Was 1000px - this gives more room */
-    margin: 0 auto; 
+    max-width: 1200px;
+    margin: 0 auto; /* Removed the 140px top margin */
     padding: 0 2rem;
     padding-bottom: 4rem;
 }
@@ -252,7 +279,9 @@ h1, h2, h3 { font-family: var(--font-heading); letter-spacing: -0.03em; }
 /* =========================================
    8. PROJECT DETAIL & MARKDOWN CONTENT
    ========================================= */
-.project-detail { margin-top: 140px; } /* Offset for fixed nav */
+.project-detail { 
+    margin-top: 120px; /* Gives space for the nav on project pages */ 
+}
 
 .prose { font-size: 1.1rem; color: #ccc; max-width: 800px; }
 .prose h2 { color: #fff; margin-top: 3rem; margin-bottom: 1rem; font-size: 1.8rem; }
