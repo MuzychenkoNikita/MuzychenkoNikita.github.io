@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Shader Programming Interface
+title: Shader Interface
 description: A custom C++ software to make your shader development less painfull.
 image: /assets/images/ShaderInterface.jpg
 github: https://github.com/yourname/repo
