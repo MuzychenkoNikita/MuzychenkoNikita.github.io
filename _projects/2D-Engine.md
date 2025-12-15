@@ -1,6 +1,6 @@
 ---
 layout: project
-title: OpenGL Rendering Engine
+title: 2D Engine
 description: A C++ custom game engine utilizing OpenGL API.
 image: /assets/images/2DEngine.jpg
 github: https://github.com/MuzychenkoNikita/2D-Engine

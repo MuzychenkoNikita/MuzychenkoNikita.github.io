@@ -46,9 +46,9 @@ title: Home
 </section>
 
 <section>
-    <h2 class="section-title">Selected Work</h2>
+    <h2 class="section-title">Selected Projects</h2>
     <div class="bento-grid">
-        {% for project in site.projects limit:2 %}
+        {% for project in site.projects limit:4 %}
         <a href="{{ project.url }}" class="card">
             <div class="card-img-container">
                 {% if project.image %}
