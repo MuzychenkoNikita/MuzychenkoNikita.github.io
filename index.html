@@ -1,0 +1,80 @@
+---
+layout: default
+title: Home
+---
+
+<header class="hero">
+    <canvas id="hero-canvas"></canvas>
+
+    <div class="hero-content">
+        <h1>Nikita<br>  Muzychenko</h1>
+        <p>Graphics Engineer & Engine Architect</p>
+
+        <div class="tech-badges">
+            <span class="badge">C/C++</span>
+            <span class="badge">Vulkan</span>
+            <span class="badge">OpenGL</span>
+            <span class="badge">HLSL/GLSL</span>
+        </div>
+    </div>
+</header>
+
+<script src="{{ '/assets/js/shader-bg.js' | relative_url }}"></script>
+
+<section class="about-split">
+    <div class="about-text">
+        <h2 class="section-title">About Me</h2>
+        <p>
+            I am a Graphics Engineer currently building the next generation of rendering engines.
+            With a background in mathematics and computer science, I specialize in bridging the gap between artistic vision and hardware constraints.
+        </p>
+        <p>
+            My experience ranges from writing performant Vulkan compute shaders to architecting high-level systems for game engines.
+            When I'm not optimizing GPU pipelines, you can find me researching real-time ray tracing techniques.
+        </p>
+
+        <div class="tech-badges" style="margin-top: 2rem;">
+            <a href="https://github.com/MuzychenkoNikita" class="badge" style="text-decoration: none;"><i class="fab fa-github"></i> GitHub</a>
+            <a href="mailto:nmuzy001@fiu.edu" class="badge" style="text-decoration: none;"><i class="fas fa-envelope"></i> Contact</a>
+            <a href="{{ '/assets/Nikita_Muzychenko_Resume.pdf' | relative_url }}" class="badge" style="text-decoration: none;" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
+        </div>
+    </div>
+
+    <div class="about-image-container">
+        <img src="{{ '/assets/images/About.jpg' | relative_url }}" alt="Nikita Muzychenko">
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Selected Projects</h2>
+    <div class="bento-grid">
+        {% for project in site.projects limit:4 %}
+        <a href="{{ project.url | relative_url }}" class="card">
+            <div class="card-img-container">
+                {% if project.image %}
+                    <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+                {% else %}
+                    <div style="width:100%; height:100%; background: linear-gradient(45deg, #111, #222);"></div>
+                {% endif %}
+            </div>
+            <div class="card-content">
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.description | truncatewords: 15 }}</p>
+                <span class="card-link">View Project <i class="fas fa-arrow-right"></i></span>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<section style="margin-top: 4rem;">
+    <h2 class="section-title">Latest Articles</h2>
+    <div class="article-list">
+        {% for post in site.posts limit:3 %}
+        <a href="{{ post.url | relative_url }}" class="article-item">
+            <h3>{{ post.title }}</h3>
+            <span class="article-date">{{ post.date | date: "%Y / %m / %d" }}</span>
+        </a>
+        {% endfor %}
+    </div>
+</section>

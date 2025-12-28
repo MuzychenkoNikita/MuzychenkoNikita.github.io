@@ -1,0 +1,20 @@
+---
+layout: default
+title: Articles
+---
+
+<header class="hero" style="height: 40vh; min-height: 300px;">
+    <div class="hero-content">
+        <h1>Technical Articles</h1>
+        <p class="text-muted">Deep dives into graphics programming and mathematics.</p>
+    </div>
+</header>
+
+<div class="article-list">
+    {% for post in site.posts %}
+    <a href="{{ post.url }}" class="article-item">
+        <h3>{{ post.title }}</h3>
+        <span class="article-date">{{ post.date | date: "%Y / %m / %d" }}</span>
+    </a>
+    {% endfor %}
+</div>

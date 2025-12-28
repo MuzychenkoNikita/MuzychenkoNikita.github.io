@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | Nikita Muzychenko</title>
+
+    <link rel="icon" href="{{ '/favicon.png' | relative_url }}" type="image/png">
+    <link rel="shortcut icon" href="{{ '/favicon.png' | relative_url }}" type="image/png">
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+    <div class="noise-overlay"></div>
+
+    <nav class="top-nav">
+        <div class="nav-content">
+            <a href="{{ '/' | relative_url }}" class="brand">NM<span class="dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="{{ '/' | relative_url }}" class="nav-item">About</a></li>
+                <li><a href="{{ '/projects' | relative_url }}" class="nav-item">Projects</a></li>
+                <li><a href="{{ '/blog' | relative_url }}" class="nav-item">Articles</a></li>
+                <li><a href="{{ '/assets/Nikita_Muzychenko_Resume.pdf' | relative_url }}" class="nav-item" target="_blank">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p class="copyright">© 2024 Nikita Muzychenko. Graphics Engineering.</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

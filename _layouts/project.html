@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<article class="project-detail">
+    <header style="margin-bottom: 3rem;">
+        <a href="/projects" class="text-muted" style="font-size: 0.9rem;">&larr; Back to Gallery</a>
+        <h1 style="font-size: 3rem; margin-top: 1rem;">{{ page.title }}</h1>
+        
+        <div class="tech-badges" style="margin-top: 1rem;">
+            {% for tech in page.tech %}
+            <span class="badge">{{ tech }}</span>
+            {% endfor %}
+            {% if page.github %}
+            <a href="{{ page.github }}" class="badge" style="background: var(--text-primary); color: var(--bg); font-weight: bold;">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            {% endif %}
+        </div>
+    </header>
+
+    {% if page.image %}
+    <div style="border: 1px solid var(--card-border); border-radius: 12px; overflow: hidden; margin-bottom: 3rem;">
+        <img src="{{ page.image }}" style="width: 100%; display: block;">
+    </div>
+    {% endif %}
+
+    <div class="prose">
+        {{ content }}
+    </div>
+</article>
+
+<style>
+    /* Specific typography for the article content */
+    .prose { font-size: 1.1rem; color: #ccc; max-width: 800px; }
+    .prose h2 { color: #fff; margin-top: 3rem; margin-bottom: 1rem; font-size: 1.8rem; }
+    .prose p { margin-bottom: 1.5rem; line-height: 1.8; }
+    .prose pre { background: #111; padding: 1.5rem; border-radius: 8px; border: 1px solid var(--card-border); overflow-x: auto; margin: 2rem 0; }
+    .prose code { font-family: var(--font-code); font-size: 0.9rem; color: var(--accent); }
+    .prose img { max-width: 100%; border-radius: 8px; margin: 2rem 0; }
+</style>
