@@ -43,4 +43,11 @@ vec3 PBR() {
 $$L_o(\mathbf{x},\omega_o)=L_e(\mathbf{x},\omega_o)+\int_{\Omega^+}f_r(\mathbf{x},\omega_i,\omega_o)\,L_i(\mathbf{x},\omega_i)\,V(\mathbf{x}, \omega_i)\,(\mathbf{n}\cdot \omega_i)\,d\omega_i$$
 
 $$
-L_o(\mathbf{x}, \omega_o)=L_e(\mathbf{x}, \omega_o)+\int_{\Omega^+}f_r(\mathbf{x}, \omega_i, \omega_o)\,L_i(\mathbf{x}, \omega_i)\,(\mathbf{n}\cdot \omega_i)\,d\omega_i$$
+L_o(\mathbf{x}, \omega_o)=L_e(\mathbf{x}, \omega_o)+\int_{\Omega^+}f_r(\mathbf{x}, \omega_i, \omega_o)\,L_i(\mathbf{x}, \omega_i)\,(\mathbf{n}\cdot \omega_i)\,d\omega_i
+$$
+
+Inline: $L_o(\mathbf{x}, \omega_o)$
+
+$$
+L_o(\mathbf{x}, \omega_o)=L_e(\mathbf{x}, \omega_o)+\int_{\Omega^+}\dots
+$$
