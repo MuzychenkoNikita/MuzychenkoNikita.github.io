@@ -48,6 +48,4 @@ $$
 
 Inline: $L_o(\mathbf{x}, \omega_o)$
 
-$$
-L_o(\mathbf{x}, \omega_o)=L_e(\mathbf{x}, \omega_o)+\int_{\Omega^+}\dots
-$$
+$ L_o(\mathbf{x}, \omega_o)=L_e(\mathbf{x}, \omega_o)+\int_{\Omega^+}\dots $
