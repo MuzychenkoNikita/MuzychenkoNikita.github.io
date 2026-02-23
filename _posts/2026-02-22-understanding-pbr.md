@@ -13,7 +13,7 @@ PBR (Physically Based Rendering) is a set of rendering techniques that aim to ma
 
 Here is some code:
 
-```cpp
+```glsl
 vec3 PBR() {
   // main vectors
   vec3 FO = baseReflectance;
