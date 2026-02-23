@@ -18,10 +18,7 @@ vec3 PBR() {
   // main vectors
   vec3 FO = baseReflectance;
   vec3 N = normalize(normal);
-    
-  // For directional light
-  // vec3 L = normalize(fs_in.TangentLightPos);
-    
+
   // For point light and spot light
   vec3 L = normalize(fs_in.TangentLightPos - fs_in.TangentFragPos);
   vec3 H = normalize(V + L);
@@ -39,17 +36,28 @@ vec3 PBR() {
   return outgoingLight;
 }
 ```
-
-```math
-E = m c^2
-```
+## Rendering Equation
+Any calculation towards Physically Based model starts from the Rendering Equation:
 
 $$L_o(\mathbf{x},\omega_o)=L_e(\mathbf{x},\omega_o)+\int_{\Omega^+}f_r(\mathbf{x},\omega_i,\omega_o)\,L_i(\mathbf{x},\omega_i)\,V(\mathbf{x}, \omega_i)\,(\mathbf{n}\cdot \omega_i)\,d\omega_i$$
 
-$$
-L_o(\mathbf{x}, \omega_o)=L_e(\mathbf{x}, \omega_o)+\int_{\Omega^+}f_r(\mathbf{x}, \omega_i, \omega_o)\,L_i(\mathbf{x}, \omega_i)\,(\mathbf{n}\cdot \omega_i)\,d\omega_i
-$$
+Where:
 
-Inline: $L_o(\mathbf{x}, \omega_o)$
+$L_o(\mathbf{x},\omega_o)$ - is outgoing light, or final color of pixel
 
-$L_o(\mathbf{x}, \omega_o)=L_e(\mathbf{x}, \omega_o)+\int_{\Omega^+}\dots$
+$L_e(\mathbf{x},\omega_o)$ - is emmited light
+
+$\int_{\Omega^+}f_r(\mathbf{x},\omega_i,\omega_o)\,L_i(\mathbf{x},\omega_i)\,V(\mathbf{x}, \omega_i)\,(\mathbf{n}\cdot \omega_i)\,d\omega_i$ - is infinite amount of light on $\mathbf{x}$ point of mesh within hemisphere $\omega_o$.
+
+Where:
+
+$f_r(\mathbf{x},\omega_i,\omega_o)\$ - is Bidirectional Reflectance Distribution Function
+
+$L_i(\mathbf{x},\omega_i)\$ - is incoming light
+
+$V(\mathbf{x}, \omega_i)\$ - shadowing term
+
+$(\mathbf{n}\cdot \omega_i)\$ - is shallow angle light intensity
+
+
+
