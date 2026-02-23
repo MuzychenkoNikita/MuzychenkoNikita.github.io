@@ -13,7 +13,7 @@ PBR (Physically Based Rendering) is a set of rendering techniques that aim to ma
 
 Here is some code:
 
-```glsl
+```cpp
 vec3 PBR() {
   // main vectors
   vec3 FO = baseReflectance;
@@ -40,7 +40,7 @@ vec3 PBR() {
 }
 ```
 
-## $$L_o(\mathbf{x},\omega_o)=L_e(\mathbf{x},\omega_o)+\int_{\Omega^+}f_r(\mathbf{x},\omega_i,\omega_o)\,L_i(\mathbf{x},\omega_i)\,V(\mathbf{x}, \omega_i)\,(\mathbf{n}\cdot \omega_i)\,d\omega_i$$
+$$L_o(\mathbf{x},\omega_o)=L_e(\mathbf{x},\omega_o)+\int_{\Omega^+}f_r(\mathbf{x},\omega_i,\omega_o)\,L_i(\mathbf{x},\omega_i)\,V(\mathbf{x}, \omega_i)\,(\mathbf{n}\cdot \omega_i)\,d\omega_i$$
 
 $$
 L_o(\mathbf{x}, \omega_o)=L_e(\mathbf{x}, \omega_o)+\int_{\Omega^+}f_r(\mathbf{x}, \omega_i, \omega_o)\,L_i(\mathbf{x}, \omega_i)\,(\mathbf{n}\cdot \omega_i)\,d\omega_i$$
