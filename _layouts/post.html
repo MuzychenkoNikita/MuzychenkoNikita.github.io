@@ -3,27 +3,12 @@ layout: default
 ---
 
 <article class="post-detail">
-  <header style="margin-bottom: 3rem; text-align: center;">
-    <h1 style="font-size: 2.5rem; margin-bottom: 5.5rem;">{{ page.title }}</h1>
-    <p class="text-muted" style="font-family: var(--font-code);">{{ page.date | date: "%B %d, %Y" }}</p>
-  </header>
+    <header style="margin-bottom: 3rem; text-align: center;">
+        <h1 style="font-size: 2.5rem; margin-bottom: 5.5rem;">{{ page.title }}</h1>
+        <p class="text-muted" style="font-family: var(--font-code);">{{ page.date | date: "%B %d, %Y" }}</p>
+    </header>
 
-  <div class="prose">
-    {{ content }}
-  </div>
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      renderMathInElement(document.querySelector(".post-detail"), {
-        delimiters: [
-          { left: "$$", right: "$$", display: true },
-          { left: "$", right: "$", display: false }
-        ],
-        throwOnError: false
-      });
-    });
-  </script>
+    <div class="prose">
+        {{ content }}
+    </div>
 </article>
