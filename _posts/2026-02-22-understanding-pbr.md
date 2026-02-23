@@ -40,6 +40,10 @@ vec3 PBR() {
 }
 ```
 
+```math
+E = m c^2
+```
+
 $$L_o(\mathbf{x},\omega_o)=L_e(\mathbf{x},\omega_o)+\int_{\Omega^+}f_r(\mathbf{x},\omega_i,\omega_o)\,L_i(\mathbf{x},\omega_i)\,V(\mathbf{x}, \omega_i)\,(\mathbf{n}\cdot \omega_i)\,d\omega_i$$
 
 $$
